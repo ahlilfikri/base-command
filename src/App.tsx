@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Copy, Check } from "lucide-react";
 import { linuxCommands, categories } from "@/constants/mock";
 import { cn } from "./lib/utils";
+import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function Home() {
   const [searchTerm, setSearchTerm] = React.useState("");
@@ -69,11 +70,14 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8 space-y-6">
       {/* Header */}
       <div className="space-y-4">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight ">Base Command Reference</h1>
-          <p className="text-muted-foreground mt-2">
-            Daftar perintah Linux lengkap dengan fungsi dan contoh penggunaannya
-          </p>
+        <div className="flex justify-between items-center">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight">Base Command Reference</h1>
+            <p className="text-muted-foreground mt-2">
+              Daftar perintah Linux lengkap dengan fungsi dan contoh penggunaannya
+            </p>
+          </div>
+          <ModeToggle />
         </div>
 
         {/* Search Bar */}
